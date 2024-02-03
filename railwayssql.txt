@@ -1,0 +1,51 @@
+mysql> use railways;
+Database changed
+mysql> desc login;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| id       | varchar(10) | YES  |     | NULL    |       |
+| password | varchar(10) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+
+mysql> select* from login;
++----------+----------+
+| id       | password |
++----------+----------+
+| railways | rjds123  |
++----------+----------+
+1 row in set (0.01 sec)
+
+mysql> desc trains;
++---------------+--------------+------+-----+---------+-------+
+| Field         | Type         | Null | Key | Default | Extra |
++---------------+--------------+------+-----+---------+-------+
+| TNo           | varchar(10)  | YES  |     | NULL    |       |
+| TrainName     | varchar(50)  | YES  |     | NULL    |       |
+| source        | varchar(100) | YES  |     | NULL    |       |
+| destination   | varchar(100) | YES  |     | NULL    |       |
+| departureTime | varchar(10)  | YES  |     | NULL    |       |
+| ArrTime       | varchar(10)  | YES  |     | NULL    |       |
+| FACS          | int          | YES  |     | NULL    |       |
+| SACS          | int          | YES  |     | NULL    |       |
+| TACS          | int          | YES  |     | NULL    |       |
+| SLS           | int          | YES  |     | NULL    |       |
+| FACF          | int          | YES  |     | NULL    |       |
+| SACF          | int          | YES  |     | NULL    |       |
+| TACF          | int          | YES  |     | NULL    |       |
+| SCF           | int          | YES  |     | NULL    |       |
++---------------+--------------+------+-----+---------+-------+
+14 rows in set (0.01 sec)
+
+mysql> select* from trains;
++-------+-------------------+-----------+-------------+---------------+---------+------+------+------+------+------+------+------+------+
+| TNo   | TrainName         | source    | destination | departureTime | ArrTime | FACS | SACS | TACS | SLS  | FACF | SACF | TACF | SCF  |
++-------+-------------------+-----------+-------------+---------------+---------+------+------+------+------+------+------+------+------+
+| T2330 | Rajdhanii Express | Karnataka | Rajasthan   | 10:40         | 18:45   |   90 |  100 |  100 |  120 |  240 |  220 |  220 |  200 |
+| T2318 | Bhopal Express    | J&K       | Bhopal      | 10:10         | 21:45   |   60 |   79 |   80 |  120 |  170 |  160 |  150 |  130 |
+| T2306 | Duranto Express   | New Delhi | Kerala      | 20:00         | 01:50   |   90 |  100 |  110 |  170 |  310 |  290 |  270 |  200 |
+| T1823 | Rohtak Express    | Gujrat    | Tamil Nadu  | 11:20         | 20:08   |   50 |   70 |   90 |  120 |  240 |  210 |  190 |  150 |
+| T3023 | Tejas Express     | New Delhi | Kashmir     | 12:30         | 21:50   |  100 |  120 |  120 |  150 |  250 |  200 |  200 |  190 |
++-------+-------------------+-----------+-------------+---------------+---------+------+------+------+------+------+------+------+------+
+5 rows in set (0.00 sec)
